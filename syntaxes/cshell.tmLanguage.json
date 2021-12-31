@@ -1,0 +1,168 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "injectionSelector": "L:source.shell",
+  "name": "C Shell",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#support"
+    },
+    {
+      "include": "#logical-test"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "match": "(?<=^|;|&|\\s)(setenv|@)(?=\\s|;|&|$)",
+          "name": "storage.modifier.shell"
+        },
+        {
+          "match": "(?<=^|;|&|\\s)(switch|end|endif|endsw|foreach)(?=\\s|;|&|$)",
+          "name": "keyword.control.shell"
+        }
+      ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "match": "\\$\\??[-*@0!_]|#argv|status",
+                  "name": "variable.other.special.shell"
+                },
+                {
+                  "match": "\\$\\??[1-9]",
+                  "name": "variable.other.positional.shell"
+                },
+                {
+                  "match": "\\$\\??[a-zA-Z_][a-zA-Z0-9_]*",
+                  "name": "variable.other.normal.shell"
+                }
+              ]
+            },
+            "2": {
+              "name": "punctuation.definition.variable.shell"
+            },
+            "4": {
+              "patterns": [
+                {
+                  "match": "\\[",
+                  "name": "punctuation.section.array.shell"
+                }
+              ],
+              "name": "variable.other.bracket.shell"
+            },
+            "5": {
+              "patterns": [
+                {
+                  "captures": {
+                    "1": {
+                      "name": "punctuation.definition.variable.shell"
+                    },
+                    "2": {
+                      "patterns": [
+                        {
+                          "match": "[-*@0!_]|#argv|status",
+                          "name": "variable.other.special.shell"
+                        },
+                        {
+                          "match": "[1-9]",
+                          "name": "variable.other.positional.shell"
+                        },
+                        {
+                          "match": "[a-zA-Z_][a-zA-Z0-9_]*",
+                          "name": "variable.other.normal.shell"
+                        }
+                      ]
+                    }
+                  },
+                  "match": "(\\$)(.*?)"
+                },
+                {
+                  "match": "\\d+",
+                  "name": "constant.numeric.integer.shell"
+                }
+              ],
+              "name": "variable.other.bracket.shell"
+            },
+            "6": {
+              "patterns": [
+                {
+                  "match": "\\]",
+                  "name": "punctuation.section.array.shell"
+                }
+              ],
+              "name": "variable.other.bracket.shell"
+            },
+            "7": {
+              "name": "keyword.operator.expansion.shell"
+            },
+            "8": {
+              "name": "variable.other.modifier.cshell"
+            }
+          },
+          "match": "(?=\\$)((\\$)(?:\\??[a-zA-Z_][a-zA-Z0-9_]*|\\??\\[1-9]|0|\\??#argv|\\??[-*@!_]))\\s*((\\[)\\s*(\\d+?|\\$.*?)\\s*(\\]))?(:)(r|e|h|t|g[reht]|q|x)"
+        },
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.variable.shell"
+            }
+          },
+          "match": "(?=\\$)(\\$\\??)(?:#argv|status|\\?0)",
+          "name": "variable.other.special.shell"
+        }
+      ]
+    },
+    "support": {
+      "match": "(?<=^|;|&|\\s)(noglob|hashstat|rehash|unhash|limit|onintr|alloc|bindkey|breaksw|built-ins|bye|chdir|echotc|filetest|glob|goto|hup|log|ls-F|nice|nohup|notify|printenv|sched|settc|setty|stop|telltc|unmask|uncomplete|unlimit|unsetenv|watchlog|where|\\$<)(?=\\s|;|&|$)",
+      "name": "support.function.builtin.shell"
+    },
+    "logical-test": {
+      "begin": "\\[{1,2}",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.logical-expression.shell"
+        }
+      },
+      "end": "\\]{1,2}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.logical-expression.shell"
+        }
+      },
+      "name": "meta.scope.logical-expression.shell",
+      "patterns": [
+        {
+          "include": "#logical-expression"
+        },
+        {
+          "include": "$self"
+        }
+      ]
+    },
+    "logical-expression": {
+      "patterns": [
+        {
+          "comment": "do we want a special rule for ( expr )?",
+          "match": "=[=~]?|![=~]?|<|>|&&|\\|\\|",
+          "name": "keyword.operator.logical.shell"
+        },
+        {
+          "match": "(?<!\\S)-(nt|ot|ef|eq|ne|l[te]|g[te]|[ACGMU]:?|P\\d*:?|[a-hklnoprstuwxzDFOILSNXZ])",
+          "name": "keyword.operator.logical.shell"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.cshell"
+}

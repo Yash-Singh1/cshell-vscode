@@ -1,0 +1,35 @@
+{
+  "name": "cshell-vscode",
+  "displayName": "C Shell",
+  "publisher": "yash-singh",
+  "description": "Syntax highlighting for the C Shell",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cshell"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cshell",
+        "scopeName": "source.cshell",
+        "path": "./syntaxes/cshell.tmLanguage.json",
+        "injectTo": [
+          "source.shell"
+        ]
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Yash-Singh1/cshell-vscode.git"
+  },
+  "license": "MIT"
+}
