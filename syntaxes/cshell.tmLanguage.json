@@ -20,6 +20,10 @@
     "keywords": {
       "patterns": [
         {
+					"match": "(?<=^|;|&|\\s)(if|elif|while|until)(?=\\()",
+					"name": "keyword.control.shell"
+				},
+        {
           "match": "(?<=^|;|&|\\s)(setenv|@)(?=\\s|;|&|$)",
           "name": "storage.modifier.shell"
         },
