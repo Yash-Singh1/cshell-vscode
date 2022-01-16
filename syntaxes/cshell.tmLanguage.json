@@ -40,7 +40,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\$\\??[-*@0!_]|#argv|status",
+                  "match": "\\$\\??([-*@0!_]|#argv|status)",
                   "name": "variable.other.special.shell"
                 },
                 {
