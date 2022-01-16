@@ -168,13 +168,13 @@
       "name": "support.function.builtin.shell"
     },
     "logical-test": {
-      "begin": "\\[{1,2}",
+      "begin": "\\(",
       "beginCaptures": {
         "0": {
           "name": "punctuation.definition.logical-expression.shell"
         }
       },
-      "end": "\\]{1,2}",
+      "end": "\\)",
       "endCaptures": {
         "0": {
           "name": "punctuation.definition.logical-expression.shell"
@@ -184,22 +184,21 @@
       "patterns": [
         {
           "include": "#logical-expression"
-        },
-        {
-          "include": "$self"
         }
       ]
     },
     "logical-expression": {
       "patterns": [
         {
-          "comment": "do we want a special rule for ( expr )?",
           "match": "=[=~]?|![=~]?|<|>|&&|\\|\\|",
           "name": "keyword.operator.logical.shell"
         },
         {
           "match": "(?<!\\S)-(nt|ot|ef|eq|ne|l[te]|g[te]|[ACGMU]:?|P\\d*:?|[a-hklnoprstuwxzDFOILSNXZ])",
           "name": "keyword.operator.logical.shell"
+        },
+        {
+          "include": "source.shell"
         }
       ]
     }
