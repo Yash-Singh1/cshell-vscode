@@ -194,7 +194,7 @@
           "name": "keyword.operator.logical.shell"
         },
         {
-          "match": "(?<!\\S)-(nt|ot|ef|eq|ne|l[te]|g[te]|[ACGMU]:?|P\\d*:?|[a-hklnoprstuwxzDFOILSNXZ])",
+          "match": "(?<![^\\s(])-(nt|ot|ef|eq|ne|l[te]|g[te]|[ACGMU]:?|P\\d*:?|[a-hklnoprstuwxzDFOILSNXZ])",
           "name": "keyword.operator.logical.shell"
         },
         {
