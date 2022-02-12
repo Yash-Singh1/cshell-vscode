@@ -20,7 +20,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "(?<=^|;|&|\\s)(if|elif|else if|while|until)(?=.*\\()",
+          "match": "(?<=^|;|&|\\s)(if|else if|switch|while)(?= *\\(.*\\))",
           "name": "keyword.control.shell"
         },
         {
@@ -28,7 +28,11 @@
           "name": "storage.modifier.shell"
         },
         {
-          "match": "(?<=^|;|&|\\s)(switch|end|endif|endsw|foreach|then)(?=\\s|;|&|$)",
+          "match": "(?<=^|;|&|\\s)(else|end|endif|then)(?=\\s|;|&|$)",
+          "name": "keyword.control.shell"
+        },
+        {
+          "match": "(?<=^|;|&|\\s)(foreach)(?= [a-zA-Z_][a-zA-Z0-9_]* *\\(.*\\))",
           "name": "keyword.control.shell"
         }
       ]
@@ -48,7 +52,7 @@
                   "name": "variable.other.positional.shell"
                 },
                 {
-                  "match": "\\$\\??[a-zA-Z_][a-zA-Z0-9_]*",
+                  "match": "\\$\\??[a-zA-Z_]*",
                   "name": "variable.other.normal.shell"
                 }
               ]
