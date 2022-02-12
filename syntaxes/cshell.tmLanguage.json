@@ -20,15 +20,15 @@
     "keywords": {
       "patterns": [
         {
-          "match": "(?<=^|;|&|\\s)(if|elif|while|until)(?=\\()",
+          "match": "(?<=^|;|&|\\s)(if|elif|else if|while|until)(?=.*\\()",
           "name": "keyword.control.shell"
         },
         {
-          "match": "(?<=^|;|&|\\s)(setenv|@)(?=\\s|;|&|$)",
+          "match": "(?<=^|;|&|\\s)(set|setenv|@)(?=\\s|;|&|$)",
           "name": "storage.modifier.shell"
         },
         {
-          "match": "(?<=^|;|&|\\s)(switch|end|endif|endsw|foreach)(?=\\s|;|&|$)",
+          "match": "(?<=^|;|&|\\s)(switch|end|endif|endsw|foreach|then)(?=\\s|;|&|$)",
           "name": "keyword.control.shell"
         }
       ]
