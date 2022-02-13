@@ -24,7 +24,7 @@
           "name": "keyword.control.shell"
         },
         {
-          "match": "(?<=^|;|&|\\s)(set|setenv|@)(?=\\s|;|&|$)",
+          "match": "(?<=^|;|&|\\s)(setenv|@)(?=\\s|;|&|$)",
           "name": "storage.modifier.shell"
         },
         {
