@@ -20,7 +20,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "(?<=^|;|&|\\s)(if|else if|switch|while)(?= *\\(.*\\))",
+          "match": "(?<=^|;|&|\\s)(if|else if|switch|while)(?=\\()",
           "name": "keyword.control.shell"
         },
         {
