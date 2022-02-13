@@ -28,7 +28,7 @@
           "name": "storage.modifier.shell"
         },
         {
-          "match": "(?<=^|;|&|\\s)(else|end|endif|then)(?=\\s|;|&|$)",
+          "match": "(?<=^|;|&|\\s)(switch|end|endif|endsw|foreach)(?=\\s|;|&|$)",
           "name": "keyword.control.shell"
         }
       ]
