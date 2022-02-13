@@ -11,6 +11,16 @@ Syntax highlighting for the CShell, the shell for C developers in Visual Studio 
 - Support C-Shell more logical and file tests
 - Make parenthesis represent logic not math
 
+## Contributing
+
+This extension works by extending the existing VSCode's [`source.shell` language implementation](https://github.com/microsoft/vscode/tree/main/extensions/shellscript). This means that the syntax grammar located at [`syntaxes/cshell.tmLanguage.json`](syntaxes/cshell.tmLanguage.json) only needs to specify syntax that is specific to CShell and not found in `bash`. For example, comments and if statements are already handled by VSCode's `source.shell` language implementation, so we don't need to specify it's syntax in our grammars. For more information on grammar injection, see the [VSCode documentation](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#injection-grammars) on it.
+
+### Debugging
+
+<!-- markdownlint-disable-next-line no-inline-html -->
+To run the extension in debug mode to test out sample code, simply press the <kbd>F5</kbd> key on your keyboard or run `Debug: Start Debugging` from the command palette. Then, create a new tab and select the language as `cshell`. Over here, you can write in sample CShell code and see how it syntax highlights with the grammars. To highlight the code again, press the reload button in the debugging toolbar. This will reset the editor allowing you to test the changes
+you just made to the grammar.
+
 ## Install
 
 [ [Extension Link](https://marketplace.visualstudio.com/items?itemName=yash-singh.cshell-vscode) | [Repository](https://github.com/Yash-Singh1/cshell-vscode) ]
