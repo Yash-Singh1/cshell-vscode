@@ -31,7 +31,7 @@ you just made to the grammar.
 
 #### New Features
 
-- Add icon for extensoin
+- Add icon for extension
 
 #### Bug Fixes
 
@@ -45,6 +45,8 @@ you just made to the grammar.
 #### Internal
 
 - Update license year
+
+---
 
 ### 0.0.2
 

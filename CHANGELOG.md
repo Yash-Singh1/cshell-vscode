@@ -4,7 +4,7 @@
 
 ### New Features
 
-- Add icon for extensoin
+- Add icon for extension
 
 ### Bug Fixes
 
@@ -18,6 +18,8 @@
 ### Internal
 
 - Update license year
+
+---
 
 ## 0.0.2
 
