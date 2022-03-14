@@ -1,5 +1,24 @@
 # Change Log
 
+## 0.0.3
+
+### New Features
+
+- Add icon for extensoin
+
+### Bug Fixes
+
+- fix: Correct [keyword]( pattern regex (#1) Thanks to @hmueller01!
+- fix: allow logic expr to be preceded by ( (69ea01999e3f0e82529afb526986a88b55280173)
+
+### Documentation
+
+- chore: add contributing instructions to README (6eb8e652925011a153a435be1823989663141e54)
+
+### Internal
+
+- Update license year
+
 ## 0.0.2
 
 ### New Features
