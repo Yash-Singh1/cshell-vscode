@@ -27,6 +27,20 @@ you just made to the grammar.
 
 ## Release Notes
 
+### 0.1.0
+
+Make sure any references to a the `cshell` language identifier be removed in your configuration.
+
+#### Bug Fixes
+
+- fix: rm confusing extra cshell lang (22ba89101edcda2a4b737dfe2e1aea746428af9c)
+
+#### Documentation
+
+- chore: fix typo and horizontal rule (42671d16aeebefaac60c4dea00dcf88d9098f25a)
+
+---
+
 ### 0.0.3
 
 #### New Features
