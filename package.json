@@ -12,14 +12,8 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "cshell"
-      }
-    ],
     "grammars": [
       {
-        "language": "cshell",
         "scopeName": "source.cshell",
         "path": "./syntaxes/cshell.tmLanguage.json",
         "injectTo": [
